@@ -1,0 +1,42 @@
+{% include 'header.html' %}
+
+{% include 'sidebar.html' %}
+
+<div class="container">
+<div class='span8 main'>
+
+    <div class="row">
+        <div class="panel panel-primary filterable">
+            <div class="panel-heading">
+                <h3 class="panel-title">Log Dosyasına Göre  [ Sql İnjection ]Saldırı Tespit Tablosu</h3>
+                <div class="pull-right">
+                    <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
+                </div>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr class="filters">
+                        <th><input type="text" class="form-control" value="#" disabled></th>
+                        <th><input type="text" class="form-control" value=" or 1=1,select,%20and%20,union" enabled></th>
+                        <th><input type="text" class="form-control" placeholder="Zaman" disabled></th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                {% for log in xss %}
+                    <tr>
+                        <td></td>
+                        <td>{{ log.logip }}</td>
+                        <td>{{ log.zaman }}</td>
+
+                    </tr>
+                {% endfor %}
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+        </div></div>
+
+{% include 'footer.html' %}

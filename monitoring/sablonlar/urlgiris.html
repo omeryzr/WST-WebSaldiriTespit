@@ -1,0 +1,37 @@
+{% include 'header.html' %}
+
+{% include 'sidebar.html' %}
+
+        <div class="container">
+<div class='span8 main'>
+    	<div class="row">
+
+            <div class="form-group">
+                <form  method="POST" action="/urlgiris/">
+                    {% csrf_token %}
+    					<label for="inpuFname">Adres çubuğu</label>
+						<div class="input-group below24 bias-input-group">
+
+						  <span class="input-group-addon">http://</span>
+
+
+
+
+
+						  <input type="text" class="form-control" name="logip" value="{{logip}}" placeholder="">
+                          <div class="input-group-btn">
+    					<button type="submit" class="btn btn-sm btn-default">Sign in</button>
+
+						  </div>
+						</div>
+
+
+
+
+            </div>
+
+
+        </div></div>
+
+
+{% include 'footer.html' %}

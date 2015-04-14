@@ -1,0 +1,173 @@
+{% include 'header.html' %}
+
+{% if request.user.is_authenticated %}
+<div class="container">
+    <div class="span3 well">
+
+        <a href=""><img src="/static/images/add_user.png" name="aboutme" width="140" height="140" class="img-circle"></a>
+        <h3>{{ request.user.username }}</h3>
+        <em>WSTS Üyesi</em>
+
+    </div>
+    
+
+<ul class="nav nav-tabs" role="tablist" id="myTab">
+  <li class="active"><a href="#kbilgi" role="tab" data-toggle="tab">Kişisel Bilgilerim</a></li>
+  <li><a href="#kulbilgi" role="tab" data-toggle="tab">Kullanıcı Bilgilerim</a></li>
+
+</ul>
+
+<div class="tab-content">
+	<div class="tab-pane active" id="kbilgi">
+
+<div class="container">
+      <div class="row">
+      
+        <div class="col-xs-12" >
+   
+   
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">Ömer Yazır</h3>
+            </div>
+            
+              <div class="row">
+                
+                
+             
+                <div class=" col-md-9 col-lg-9 "> 
+                  <table class="table table-user-information">
+                    <tbody>
+                      <tr>
+                        <td>Bölüm:</td>
+                        <td>Yazılım Mühendisi</td>
+                      </tr>
+                      <tr>
+                        <td>Kullanıcı Adi</td>
+                        <td>{{request.user.username}}</td>
+                      </tr>
+
+                      <tr>
+                        <td>E-Posta</td>
+                        <td>ahmetkara@gmail.com</td>
+                      </tr>
+                      <tr>
+                        <td>Şifre</td>
+                        <td>{{request.user.password}}</td>
+                      </tr>
+                      <tr>
+                        <td>Baba Adı</td>
+                        <td>-----</td>
+                      </tr>
+                      <tr>
+                        <td>Ana Adı</td>
+                        <td>-----</td>
+                      </tr>
+                      <tr>
+
+                    
+                  </table>
+                
+                </div>
+              </div>
+            </div>
+                 <div class="panel-footer">
+                        <a href="iletisim.html" data-original-title="Mesaj Gönder" data-toggle="tooltip" type="button" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-envelope"></i></a>
+                        
+                            
+                    </div>
+            
+          </div>
+        </div>
+      </div>
+
+	</div>
+	<div class="tab-pane" id="kulbilgi">
+
+	
+<div class="container">
+      <div class="row">
+      
+        <div class="col-xs-12" >
+   
+   
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">Ömer Yazır</h3>
+            </div>
+            
+              <div class="row">
+               
+                
+             
+                <div class=" col-md-9 col-lg-9 "> 
+                  <table class="table table-user-information">
+                    <tbody>
+                      
+                        <tr>
+                        <td>E-posta </td>
+                        <td>ahmetkara@gmail.com</td>
+                      </tr>
+
+                      <tr>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                     
+                    
+                  </table>
+                
+                </div>
+              </div>
+            </div>
+                 <div class="panel-footer">
+                        <a href="iletisim.html" data-original-title="Mesaj Gönder" data-toggle="tooltip" type="button" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-envelope"></i></a>
+                        
+                            
+                    </div>
+
+          </div>
+        </div>
+      </div>
+
+	</div>	
+
+
+	
+  <div class="tab-pane" id="bankabilgi">
+
+<div class="container">
+      <div class="row">
+      
+        <div class="col-xs-12" >
+   
+   
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">Ömer Yazır</h3>
+            </div>
+            
+
+            </div>
+                 <div class="panel-footer">
+                        <a href="iletisim.html" data-original-title="Mesaj Gönder" data-toggle="tooltip" type="button" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-envelope"></i></a>
+                        
+                            
+                    </div>
+            
+          </div>
+        </div>
+      </div>
+
+	</div>	
+
+  <div class="tab-pane" id="kredibilgi"><div class="container">
+
+
+
+</div>
+</div>
+</div>
+  
+{% endif %}
+{% include 'footer.html' %}
